@@ -1,0 +1,207 @@
+[
+    {
+       "request":{
+          "type":"City",
+          "query":"Milan, Italy",
+          "language":"en",
+          "unit":"m"
+       },
+       "location":{
+          "name":"Milan",
+          "country":"Italy",
+          "region":"Lombardia",
+          "lat":"45.467",
+          "lon":"9.200",
+          "timezone_id":"Europe/Rome",
+          "localtime":"2024-01-12 21:10",
+          "localtime_epoch":1705093800,
+          "utc_offset":"1.0"
+       },
+       "current":{
+          "observation_time":"08:10 PM",
+          "temperature":3,
+          "weather_code":113,
+          "weather_icons":[
+             "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+          ],
+          "weather_descriptions":[
+             "Clear"
+          ],
+          "wind_speed":4,
+          "wind_degree":97,
+          "wind_dir":"E",
+          "pressure":1024,
+          "precip":0,
+          "humidity":93,
+          "cloudcover":0,
+          "feelslike":2,
+          "uv_index":1,
+          "visibility":10,
+          "is_day":"no"
+       }
+    },
+    {
+       "request":{
+          "type":"City",
+          "query":"Rome, Italy",
+          "language":"en",
+          "unit":"m"
+       },
+       "location":{
+          "name":"Rome",
+          "country":"Italy",
+          "region":"Lazio",
+          "lat":"41.9028",
+          "lon":"12.4964",
+          "timezone_id":"Europe/Rome",
+          "localtime":"2024-01-12 21:10",
+          "localtime_epoch":1705093800,
+          "utc_offset":"1.0"
+       },
+       "current":{
+          "observation_time":"08:10 PM",
+          "temperature":5,
+          "weather_code":113,
+          "weather_icons":[
+             "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+          ],
+          "weather_descriptions":[
+             "Clear"
+          ],
+          "wind_speed":3,
+          "wind_degree":90,
+          "wind_dir":"N",
+          "pressure":1025,
+          "precip":0,
+          "humidity":91,
+          "cloudcover":0,
+          "feelslike":4,
+          "uv_index":1,
+          "visibility":9,
+          "is_day":"no"
+       }
+    },
+    {
+       "request":{
+          "type":"City",
+          "query":"Dubai, United Arab Emirates",
+          "language":"en",
+          "unit":"m"
+       },
+       "location":{
+          "name":"Dubai",
+          "country":"United Arab Emirates",
+          "region":"Dubai",
+          "lat":"25.276987",
+          "lon":"55.296249",
+          "timezone_id":"Asia/Dubai",
+          "localtime":"2024-01-12 23:10",
+          "localtime_epoch":1705097400,
+          "utc_offset":"4.0"
+       },
+       "current":{
+          "observation_time":"10:10 PM",
+          "temperature":22,
+          "weather_code":113,
+          "weather_icons":[
+             "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+          ],
+          "weather_descriptions":[
+             "Clear"
+          ],
+          "wind_speed":8,
+          "wind_degree":80,
+          "wind_dir":"E",
+          "pressure":1016,
+          "precip":0,
+          "humidity":60,
+          "cloudcover":0,
+          "feelslike":23,
+          "uv_index":0,
+          "visibility":10,
+          "is_day":"no"
+       }
+    },
+    {
+       "request":{
+          "type":"City",
+          "query":"New York, USA",
+          "language":"en",
+          "unit":"m"
+       },
+       "location":{
+          "name":"New York",
+          "country":"USA",
+          "region":"New York",
+          "lat":"40.712776",
+          "lon":"-74.005974",
+          "timezone_id":"America/New_York",
+          "localtime":"2024-01-12 15:10",
+          "localtime_epoch":1705066200,
+          "utc_offset":"-5.0"
+       },
+       "current":{
+          "observation_time":"03:10 PM",
+          "temperature":1,
+          "weather_code":116,
+          "weather_icons":[
+             "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0004_black_low_cloud.png"
+          ],
+          "weather_descriptions":[
+             "Partly cloudy"
+          ],
+          "wind_speed":12,
+          "wind_degree":320,
+          "wind_dir":"NW",
+          "pressure":1016,
+          "precip":0,
+          "humidity":60,
+          "cloudcover":25,
+          "feelslike":-2,
+          "uv_index":2,
+          "visibility":10,
+          "is_day":"yes"
+       }
+    },
+    {
+       "request":{
+          "type":"City",
+          "query":"London, UK",
+          "language":"en",
+          "unit":"m"
+       },
+       "location":{
+          "name":"London",
+          "country":"UK",
+          "region":"England",
+          "lat":"51.5074",
+          "lon":"-0.1278",
+          "timezone_id":"Europe/London",
+          "localtime":"2024-01-12 20:10",
+          "localtime_epoch":1705087800,
+          "utc_offset":"0.0"
+       },
+       "current":{
+          "observation_time":"08:10 PM",
+          "temperature":6,
+          "weather_code":116,
+          "weather_icons":[
+             "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+          ],
+          "weather_descriptions":[
+             "Partly cloudy"
+          ],
+          "wind_speed":6,
+          "wind_degree":240,
+          "wind_dir":"WSW",
+          "pressure":1010,
+          "precip":0,
+          "humidity":80,
+          "cloudcover":25,
+          "feelslike":4,
+          "uv_index":1,
+          "visibility":10,
+          "is_day":"no"
+       }
+    }
+ ]

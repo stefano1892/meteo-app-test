@@ -1,0 +1,55 @@
+.input-component {
+    display: inline;
+}
+
+.form-col {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+    right: 6px;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 17px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 20rem;
+}
+
+input:focus {
+    outline: none;
+}
+  
+.cityInput {
+    width: 100%;
+    border: none;
+    margin-left: 10px;
+    height: 40px;
+}
+
+.btn-submit {
+    margin-left: auto;
+    border-radius: 15px !important;
+    background-color: #209ADB !important;
+    color: white !important;
+    border: none;
+    height: 37px;
+    width: 65px;
+}
+
+.degree-select-container {
+    height: 100%;
+    display: flex;
+    width: 10rem;
+}
+
+@media screen and (max-width: 767px){
+    .degree-select-container {
+        margin: auto;
+        margin-top: 1rem;
+    }
+}

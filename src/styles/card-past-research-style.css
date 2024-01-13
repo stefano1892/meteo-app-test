@@ -1,0 +1,25 @@
+.card-past-container {
+    background-color: #323546;
+    border-radius: 15px;
+    padding: 7px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.past-location {
+    font-size: 18px;
+}
+
+.image-research {
+    width: 50px;
+}
+
+.card-past-container:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+    .past-search-col {
+        margin-top: 1rem;
+    }
+}

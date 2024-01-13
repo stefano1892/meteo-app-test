@@ -1,0 +1,22 @@
+.location-header {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: #2C2F3E;
+}
+
+.location-name {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.location-list-container {
+    text-align: center;
+}
+
+.location-list {
+    list-style: none;
+}
