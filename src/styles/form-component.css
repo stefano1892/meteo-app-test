@@ -52,4 +52,9 @@ input:focus {
         margin: auto;
         margin-top: 1rem;
     }
+
+    .form-col {
+        justify-content: center;
+        align-items: center;
+    }
 }
