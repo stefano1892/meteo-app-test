@@ -35,7 +35,7 @@ function App() {
 
   const ErrorFallback = () => {
     return (
-      <div>
+      <div className='text-center mt-5'>
         <h2>Ops! La città selezionata non esiste.</h2>
         <Button className='btn btn-primary' onClick={() => {
           setIsError(false)
