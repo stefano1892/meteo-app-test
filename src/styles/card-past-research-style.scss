@@ -1,5 +1,5 @@
 .card-past-container {
-    background-color: #323546;
+    background-color: $tertiary-color;
     border-radius: 15px;
     padding: 7px;
     width: auto;
@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 997px){
     .past-search-col {
         margin-top: 1rem;
     }

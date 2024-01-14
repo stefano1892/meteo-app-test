@@ -1,0 +1,15 @@
+.label-color {
+    color: white !important;
+}
+
+.nav-link-custom {
+    color: white !important;
+}
+
+.nav-link-custom:hover {
+    color: $detail-color !important;
+}
+
+.active-link {
+    color: $detail-color !important;
+}

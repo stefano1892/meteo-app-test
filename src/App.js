@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col, Form, Button } from 'react-bootstrap'
@@ -12,6 +12,8 @@ import { ErrorBoundary} from "react-error-boundary";
 import FormComponent from './components/form-component';
 import ActiveResultComponent from './components/active-result-component';
 import PastResearchComponent from './components/past-research-component';
+import NavbarComponent from './components/navbar-component';
+import FooterComponent from './components/footer-component';
 
 function App() {
 
@@ -71,8 +73,9 @@ function App() {
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback} >
-      <div className="App mt-3">
-        <Row className='m-0 w-100'>
+      <div className="App">
+        <NavbarComponent />
+        <Row className='m-0 w-100 mt-3'>
           <Col md={6} className='form-col'>
             <div className="d-flex">
               <FormComponent 
@@ -103,7 +106,9 @@ function App() {
             activateResearch={activateResearch}
           />
         </>)}
-        
+        <footer>
+          <FooterComponent/>
+        </footer>
       </div>
     </ErrorBoundary>
   );

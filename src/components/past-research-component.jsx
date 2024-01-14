@@ -9,18 +9,20 @@ const PastResearchComponent = ({activateResearch}) => {
  
     return (
         <>
-            <div className="my-3 mx-3">
-                <h3>Ricerche passate</h3>
-                <Row className="w-100 m-0">
-                    {reversedCities.map((city, index) => (
-                        <Col xs={12} sm={12} md={6} lg={2} xl={2} key={index}>
-                            <div className="past-search-col">
-                                <CardPastResearch city={city} activateResearch={activateResearch}/>
-                            </div>
-                        </Col>
-                    ))}
-                </Row>
-            </div>
+            {reversedCities.length !== 0 ? (<>
+                <div className="my-3 mx-3">
+                    <h3>Ricerche passate</h3>
+                    <Row className="w-100 m-0">
+                        {reversedCities.map((city, index) => (
+                            <Col xs={12} sm={12} md={12} lg={2} xl={2} key={index}>
+                                <div className="past-search-col">
+                                    <CardPastResearch city={city} activateResearch={activateResearch}/>
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </div>
+            </>) : null}
         </>
     );
 }
