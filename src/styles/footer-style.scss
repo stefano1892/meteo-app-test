@@ -2,37 +2,34 @@
     background-color: $tertiary-color;
     height: 15rem;
     position: relative;
-}
 
-.registered-mark {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: $secondary-color;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links-container {
-    margin-top: 1rem;
-
-    .footer-link-title {
-        font-size: 20px;
+    .footer-links-container {
+        margin-top: 1rem;
+    
+        .footer-link-title {
+            font-size: 20px;
+        }
+    
+        .footer-link {
+            text-decoration: none;
+            color: white;
+        }
+    
+        .footer-link:hover {
+            cursor: pointer;
+            color: $detail-color;
+        }
     }
 
-    .footer-link {
-        text-decoration: none;
-        color: white;
+    .registered-mark {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $secondary-color;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-
-    .footer-link:hover {
-        cursor: pointer;
-        color: $detail-color;
-    }
+    
 }

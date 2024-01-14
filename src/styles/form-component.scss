@@ -1,5 +1,28 @@
-.input-component {
-    display: inline;
+.form-container {
+    background-color: white;
+    border-radius: 17px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 20rem;
+
+    .cityInput {
+        width: 100%;
+        border: none;
+        margin-left: 10px;
+        height: 40px;
+    }
+
+    .btn-submit {
+        margin-left: auto;
+        border-radius: 15px !important;
+        background-color: $detail-color !important;
+        color: white !important;
+        border: none;
+        height: 37px;
+        width: 65px;
+    }
 }
 
 .form-col {
@@ -10,35 +33,8 @@
     right: 6px;
 }
 
-.form-container {
-    background-color: white;
-    border-radius: 17px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    width: 20rem;
-}
-
 input:focus {
     outline: none;
-}
-  
-.cityInput {
-    width: 100%;
-    border: none;
-    margin-left: 10px;
-    height: 40px;
-}
-
-.btn-submit {
-    margin-left: auto;
-    border-radius: 15px !important;
-    background-color: $detail-color !important;
-    color: white !important;
-    border: none;
-    height: 37px;
-    width: 65px;
 }
 
 .degree-select-container {

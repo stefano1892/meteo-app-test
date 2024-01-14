@@ -15,7 +15,20 @@ const FooterComponent = () => {
                                 <a href="#" className="footer-link">Previsioni</a>
                             </div>
                             <div>
+                                <a href="#" className="footer-link">Situazione</a>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="footer-links-container text-center">
+                            <b className="footer-link-title">Novità</b>
+                            <div className="mt-3">
                                 <a href="#" className="footer-link">Webcam</a>
+                            </div>
+                            <div>
+                                <a href="#" className="footer-link">News</a>
                             </div>
                             <div>
                                 <a href="#" className="footer-link">Viabilità</a>
@@ -30,6 +43,9 @@ const FooterComponent = () => {
                             </div>
                             <div>
                                 <a href="#" className="footer-link">Business</a>
+                            </div>
+                            <div>
+                                <a href="#" className="footer-link">Lavora con noi</a>
                             </div>
                         </div>
                     </Col>
