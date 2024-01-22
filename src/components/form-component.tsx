@@ -1,4 +1,12 @@
-const FormComponent = ({handleInputChange, handleSubmit, city}) => {
+import React from "react";
+
+interface FormComponentProps {
+    handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+    city: string;
+}
+
+const FormComponent = ({handleInputChange, handleSubmit, city}: FormComponentProps) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className='form-container'>
@@ -17,7 +25,6 @@ const FormComponent = ({handleInputChange, handleSubmit, city}) => {
                     Cerca
                 </button>
             </div>
-            
         </form>
     );
 }

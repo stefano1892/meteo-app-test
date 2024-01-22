@@ -8,3 +8,7 @@ export const store = configureStore({
     degreeSelection: degreeReducer
   },
 })
+
+export type AppSelector = ReturnType<typeof store.getState>
+
+// () => number => ReturnType<() => number> = number

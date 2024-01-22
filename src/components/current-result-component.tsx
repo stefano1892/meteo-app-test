@@ -1,27 +1,23 @@
+import React, { useMemo } from 'react';
+
 import { Row, Col } from 'react-bootstrap'
 import { useSelector } from 'react-redux';
+import { ICity } from '../interfaces/ICity';
+import {AppSelector} from '../store/store';
 
-const CurrentResultComponent = ({city}) => {
+interface CurrentResultComponentProps {
+    city?: ICity
+}
 
-    const degreeSelected = useSelector((state) => state.degreeSelection.degree)
+const CurrentResultComponent = ({city}: CurrentResultComponentProps) => {
 
-    const checkDegreeMeter = () => {
-        if(degreeSelected === 'Celsius') {
-            return '°C'
-        } else {
-            return '°F'
-        }
-    }
+    const degreeSelected = useSelector<AppSelector>((state) => state.degreeSelection.degree)
 
-    const checkTemperature = () => {
-        if(degreeSelected === 'Celsius') {
-            return city.current.temperature
-        } else {
-            const temperatureToInt = parseInt(city.current.temperature)
-            const newTemperature = temperatureToInt+32
-            return newTemperature
-        }
-    }
+    const temperature = useMemo(() => {
+        if(!city) return ''
+
+        return degreeSelected === 'Celsius' ? `${city.current.temperature}°C` : `${city.current.temperature + 32}°F`
+    }, [degreeSelected, city])
 
     return (
         <>
@@ -39,7 +35,7 @@ const CurrentResultComponent = ({city}) => {
                                 Ora attuale: {city.current.observation_time}
                             </li>
                             <li>
-                                Temperatura: {checkTemperature()} {checkDegreeMeter()}
+                                Temperatura: {temperature}
                             </li>
                             <li>
                                 Velocità vento: {city.current.wind_speed}

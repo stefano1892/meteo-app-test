@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ICity } from "../interfaces/ICity";
 
-const initialState = {
+interface InitialStateTypes {
+    searches: ICity[]
+}
+
+const initialState: InitialStateTypes = {
     searches: []
 }
 

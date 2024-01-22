@@ -2,7 +2,7 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col, Form, Button } from 'react-bootstrap'
-import { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { getWeather } from './api/getCityWeather';
 import { useDispatch } from 'react-redux';
 import { addResearch } from './store/weatherSlice';
@@ -14,60 +14,82 @@ import ActiveResultComponent from './components/active-result-component';
 import PastResearchComponent from './components/past-research-component';
 import NavbarComponent from './components/navbar-component';
 import FooterComponent from './components/footer-component';
+import { ICity } from './interfaces/ICity';
 
 function App() {
 
   const dispatch = useDispatch()
 
-  const [city, setCity] = useState('')
-  const [cityResult , setCityResult] = useState()
-  const [isError, setIsError] = useState(false) 
+  const [city, setCity] = useState<string>('')
+  const [cityResult , setCityResult] = useState<ICity>()
+  const [isError, setIsError] = useState<boolean>(false) 
+
+  const getWeatherCallback = useCallback((city: string): Promise<ICity> => {
+    return getWeather(city)
+      .then(data => {
+        setCityResult(data)
+        setIsError(false)
+        return data
+      })
+      .catch((error) => {
+        setIsError(true)
+        throw error
+      })
+  }, [])
 
   useEffect(() => {
-    const asyncFunction = async () => {
+    /*const asyncFunction = async (): Promise<void> => {
       try {
-        const citySelected = await getWeather('rome');
+        const citySelected: ICity = await getWeather('rome');
         setCityResult(citySelected);
+        setIsError(false)
       } catch (error) {
         setIsError(true)
       }
     };
-    asyncFunction();
+    asyncFunction();*/
+    getWeatherCallback('rome')
   }, []);
+
+  const errorFallbackClick = useCallback(() => {
+    setIsError(false)
+    setCity('');
+    window.location.reload()}, [])
 
   const ErrorFallback = () => {
     return (
       <div className='text-center mt-5'>
         <h2>Ops! La città selezionata non esiste.</h2>
-        <Button className='btn btn-primary' onClick={() => {
-          setIsError(false)
-          setCity('');
-          window.location.reload()}}>Riprova</Button>
+        <Button className='btn btn-primary' onClick={errorFallbackClick}>Riprova</Button>
       </div>
     );
   }
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setCity(e.target.value)
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
-    try {
-      const citySelected = await getWeather(city);
+    /*try {
+      const citySelected: ICity = await getWeather(city);
       setCityResult(citySelected);
       dispatch(addResearch(citySelected));
       setCity('');
     } catch (error) {
       setIsError(true)
-    }
+    }*/
+    getWeatherCallback(city)
+      .then(addResearch)
+      .then(dispatch)
+      .then(() => setCity(''))
+    //   .then((citySelected) => {
+    //     dispatch(addResearch(citySelected))
+    //     setCity('')
+    // })
   }
 
-  const activateResearch = (city) => {
-    setCityResult(city)
-  }
-
-  const handleChangeDegree = (e) => {
+  const handleChangeDegree = (e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(changeDegree(e.target.value))
   }
 
@@ -103,7 +125,7 @@ function App() {
             city={cityResult}
           />
           <PastResearchComponent 
-            activateResearch={activateResearch}
+            activateResearch={setCityResult}
           />
         </>)}
         <footer>

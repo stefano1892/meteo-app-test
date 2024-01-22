@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+interface InitialStateTypes {
+    degree: string
+}
+
+
+const initialState: InitialStateTypes = {
     degree: "Celsius"
 }
 

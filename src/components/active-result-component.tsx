@@ -1,33 +1,31 @@
+import React, { useMemo } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import LocationResultComponent from './location-result-component';
 import CurrentResultComponent from './current-result-component';
+import { ICity } from '../interfaces/ICity';
 
-const ActiveResultComponent = ({ city }) => {
+interface ActiveResultComponentProps {
+    city?: ICity
+}
 
-    const imgLocation = () => {
-        if (!city || !city.location || !city.location.name) {
-            return null;
-        }
-        const location = city.location.name.toLowerCase();
-        switch (location) {
-            case 'milan':
-                return require('../img/milano.jpg');
-            case 'dubai':
-                return require('../img/dubai.jpg');
-            case 'london':
-                return require('../img/londra.jpeg');
-            case 'new york':
-                return require('../img/newyork.jpg');
-            case 'rome':
-                return require('../img/colosseo.jpg');
-            default:
-                return null;
-        }
-    };
+const imagesLocations: Record<string, string> = {
+    milan: require('../img/milano.jpg'),
+    dubai: require('../img/dubai.jpg'),
+    london: require('../img/londra.jpeg'),
+    'new york': require('../img/newyork.jpg'),
+    rome: require('../img/colosseo.jpg')
+}
+
+const ActiveResultComponent = ({ city }: ActiveResultComponentProps) => {
+
+    const imgLocation = useMemo(() => {
+        const location = city?.location?.name?.toLowerCase();
+        return location ? imagesLocations[location] || null : null
+    }, [city])
 
     return (
         <>
-            {imgLocation() && <div className='image-container mt-5'><img className='image-component' alt="" src={imgLocation()} /></div>}
+            {imgLocation && <div className='image-container mt-5'><img className='image-component' alt="" src={imgLocation} /></div>}
 
             <div className='active-result-container'>
                 <Row className='m-0 w-100'>
