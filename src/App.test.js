@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
+// src/App.test.js
+import React from 'react';
+import { render, waitFor } from '@testing-library/react';
 import App from './App';
+import {store} from './store/store';
+import { Provider } from 'react-redux';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+    test('input - exists', async () => {
+        const { asFragment } = render(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        );
+
+        await waitFor(() => {
+            expect(asFragment()).toMatchSnapshot();
+        });
+    });
 });

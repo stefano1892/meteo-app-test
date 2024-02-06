@@ -1,5 +1,3 @@
-import axios from "axios";
-import { baseURL } from "../config";
 import mock from './mock.json'
 
 export const getWeather = async (city) => {

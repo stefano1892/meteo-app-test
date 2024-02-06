@@ -75,6 +75,7 @@ function App() {
     <ErrorBoundary FallbackComponent={ErrorFallback} >
       <div className="App">
         <NavbarComponent />
+        <button data-testid="button-test">cliccami</button>
         <Row className='m-0 w-100 mt-3'>
           <Col md={6} className='form-col'>
             <div className="d-flex">
