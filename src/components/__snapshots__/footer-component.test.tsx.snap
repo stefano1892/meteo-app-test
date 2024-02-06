@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterComponent Snap Footer 1`] = `
+<DocumentFragment>
+  <div
+    class="w-100 mt-3 footer-containter"
+  >
+    <div
+      class="w-100 m-0 row"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="footer-links-container text-center"
+        >
+          <b
+            class="footer-link-title"
+          >
+            Link utili
+          </b>
+          <div
+            class="mt-3"
+          >
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Home
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Previsioni
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Situazione
+            </a>
+          </div>
+          <div />
+        </div>
+      </div>
+      <div
+        class="col"
+      >
+        <div
+          class="footer-links-container text-center"
+        >
+          <b
+            class="footer-link-title"
+          >
+            Novità
+          </b>
+          <div
+            class="mt-3"
+          >
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Webcam
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-link"
+              href="#"
+            >
+              News
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Viabilità
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col"
+      >
+        <div
+          class="footer-links-container text-center"
+        >
+          <b
+            class="footer-link-title"
+          >
+            Contatti
+          </b>
+          <div
+            class="mt-3"
+          >
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Contatti
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Business
+            </a>
+          </div>
+          <div>
+            <a
+              class="footer-link"
+              href="#"
+            >
+              Lavora con noi
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="registered-mark"
+    >
+      © 2024 Copyright: Brandname.com
+    </div>
+  </div>
+</DocumentFragment>
+`;

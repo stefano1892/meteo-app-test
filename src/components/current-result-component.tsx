@@ -1,23 +1,15 @@
 import React, { useMemo } from 'react';
 
 import { Row, Col } from 'react-bootstrap'
-import { useSelector } from 'react-redux';
 import { ICity } from '../interfaces/ICity';
-import {AppSelector} from '../store/store';
+import { useTemperature } from '../hooks/useTemperature';
 
 interface CurrentResultComponentProps {
     city?: ICity
 }
 
 const CurrentResultComponent = ({city}: CurrentResultComponentProps) => {
-
-    const degreeSelected = useSelector<AppSelector>((state) => state.degreeSelection.degree)
-
-    const temperature = useMemo(() => {
-        if(!city) return ''
-
-        return degreeSelected === 'Celsius' ? `${city.current.temperature}°C` : `${city.current.temperature + 32}°F`
-    }, [degreeSelected, city])
+    const temperature = useTemperature(city);
 
     return (
         <>

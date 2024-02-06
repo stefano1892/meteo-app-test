@@ -1,31 +1,12 @@
 import { Col, Row } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useTemperature } from '../hooks/useTemperature';
 
 const CardPastResearch = ({city, activateResearch}) => {
-
-    const degreeSelected = useSelector((state) => state.degreeSelection.degree)
-
     const handleActivateResearch = () => {
         activateResearch(city)
     }
 
-    const checkDegreeMeter = () => {
-        if(degreeSelected === 'Celsius') {
-            return '°C'
-        } else {
-            return '°F'
-        }
-    }
-
-    const checkTemperature = () => {
-        if(degreeSelected === 'Celsius') {
-            return city.current.temperature
-        } else {
-            const temperatureToInt = parseInt(city.current.temperature)
-            const newTemperature = temperatureToInt+32
-            return newTemperature
-        }
-    }
+    const temperature = useTemperature(city)
 
     return (
         <>
@@ -41,7 +22,7 @@ const CardPastResearch = ({city, activateResearch}) => {
                     </Row>
                     <Row className="w-100 m-0">
                         <Col>
-                            Temperatura: {checkTemperature()} {checkDegreeMeter()}
+                            Temperatura: {temperature}
                         </Col>
                     </Row>
                 </div>
