@@ -1,18 +1,19 @@
 import { Col, Row } from "react-bootstrap";
 import { useTemperature } from '../hooks/useTemperature';
+import { ICity } from "../interfaces/ICity";
 
-const CardPastResearch = ({city, activateResearch}) => {
-    const handleActivateResearch = () => {
-        activateResearch(city)
-    }
+interface CardPastResearchProps {
+    city?: ICity,
+    activateResearch?: (city: ICity) => void  
+} 
 
+const CardPastResearch = ({city, activateResearch}: CardPastResearchProps) => {
     const temperature = useTemperature(city)
 
     return (
         <>
             {city ? (<>
-                <div className="card-past-container" onClick={handleActivateResearch}>
-                    {/*city.location.name*/}
+                <div className="card-past-container" onClick={() => activateResearch?.(city)}>
                     <Row className="w-100 m-0">
                         <Col>
                             <div className="past-location">

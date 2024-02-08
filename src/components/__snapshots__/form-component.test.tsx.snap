@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormComponent Submit button is disabled 1`] = `
+<DocumentFragment>
+  <form>
+    <div
+      class="form-container"
+    >
+      <input
+        class="cityInput"
+        placeholder="Inserisci la città..."
+        type="text"
+        value=""
+      />
+      <button
+        class="btn btn-submit"
+        disabled=""
+        type="submit"
+      >
+        Cerca
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`FormComponent Submit button is enabled 1`] = `
+<DocumentFragment>
+  <form>
+    <div
+      class="form-container"
+    >
+      <input
+        class="cityInput"
+        placeholder="Inserisci la città..."
+        type="text"
+        value="Milan"
+      />
+      <button
+        class="btn btn-submit"
+        type="submit"
+      >
+        Cerca
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

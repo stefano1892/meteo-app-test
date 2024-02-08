@@ -32,8 +32,8 @@ function App() {
         return data
       })
       .catch((error) => {
+        setCityResult(undefined)
         setIsError(true)
-        throw error
       })
   }, [])
 
@@ -116,11 +116,8 @@ function App() {
             </div>
           </Col>
         </Row>
-        {isError ? (
-          <>
-            <ErrorFallback />
-          </>
-        ) : (<>
+        {isError ? (<ErrorFallback />) : 
+        (<>
           <ActiveResultComponent 
             city={cityResult}
           />

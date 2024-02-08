@@ -1,14 +1,5 @@
 import { Row, Col } from 'react-bootstrap'
 
-/*
-
-const test = () => {
-    return 42
-}
-
-const test = () => 42
-
-*/
 
 const LocationResultComponent = ({city}) => (
     <>

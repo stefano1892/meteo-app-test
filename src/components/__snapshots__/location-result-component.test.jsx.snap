@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationResultComponent Component must return nothing if city is not defined 1`] = `<DocumentFragment />`;
+
+exports[`LocationResultComponent Component must return something if city is defined 1`] = `
+<DocumentFragment>
+  <div
+    class="m-0 w-100 row"
+  >
+    <div
+      class="location-header"
+    >
+      <b>
+        Posizione
+      </b>
+    </div>
+  </div>
+  <div
+    class="m-0 w-100 mt-5 row"
+  >
+    <div
+      class="col"
+    >
+      <div
+        class="location-name"
+      >
+        Milan
+      </div>
+    </div>
+    <div
+      class="col"
+    >
+      <div
+        class="text-center"
+      >
+        <img
+          alt=""
+          src="https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="m-0 w-100 mt-5 row"
+  >
+    <div
+      class="col"
+    >
+      <div
+        class="location-list-container"
+      >
+        <ul
+          class="location-list"
+        >
+          <li>
+            Paese: Italy
+          </li>
+          <li>
+            Regione: Lombardia
+          </li>
+          <li>
+            Latitudine: 45.467
+          </li>
+          <li>
+            Longitudine: 9.200
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="col"
+    >
+      <div
+        class="location-list-container"
+      >
+        <ul
+          class="location-list"
+        >
+          <li>
+            Timezone: Europe/Rome
+          </li>
+          <li>
+            Data e ora: 2024-01-12 21:10
+          </li>
+          <li>
+            Fuso orario: 1.0
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

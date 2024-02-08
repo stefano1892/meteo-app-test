@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrentResultComponent Component must return nothing if city is not defined 1`] = `<DocumentFragment />`;
+
+exports[`CurrentResultComponent Component must return something if city is defined 3 1`] = `
+<DocumentFragment>
+  <div
+    class="m-0 w-100 row"
+  >
+    <div
+      class="location-header"
+    >
+      <b>
+        Situazione metereologica
+      </b>
+    </div>
+  </div>
+  <div
+    class="m-0 w-100 mt-5 row"
+  >
+    <div
+      class="col"
+    >
+      <div
+        class="location-list-container"
+      >
+        <ul
+          class="location-list"
+        >
+          <li>
+            Ora attuale: 08:10 PM
+          </li>
+          <li>
+            Temperatura: 3°C
+          </li>
+          <li>
+            Velocità vento: 4
+          </li>
+          <li>
+            Direzione del vento: E
+          </li>
+          <li>
+            Pressione: 1024
+          </li>
+          <li>
+            Precipitazioni: 0
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="col"
+    >
+      <div
+        class="location-list-container"
+      >
+        <ul
+          class="location-list"
+        >
+          <li>
+            Umidità: 93
+          </li>
+          <li>
+            Nuvolosità: 0
+          </li>
+          <li>
+            Temp. Percepita: 2
+          </li>
+          <li>
+            Visibilità: 10
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

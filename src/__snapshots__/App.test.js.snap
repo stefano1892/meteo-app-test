@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App input - exists 1`] = `
+exports[`App IsError works 1`] = `
+<DocumentFragment>
+  <div
+    class="text-center mt-5"
+  >
+    <h2>
+      Ops! La città selezionata non esiste.
+    </h2>
+    <button
+      class="btn btn-primary btn btn-primary"
+      type="button"
+    >
+      Riprova
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App Render App 1`] = `
 <DocumentFragment>
   <div
     class="App"
@@ -184,6 +202,15 @@ exports[`App input - exists 1`] = `
       </div>
     </div>
     <div
+      class="image-container mt-5"
+    >
+      <img
+        alt=""
+        class="image-component"
+        src="src/img/milano.jpg"
+      />
+    </div>
+    <div
       class="active-result-container"
     >
       <div
@@ -194,14 +221,170 @@ exports[`App input - exists 1`] = `
         >
           <div
             class="main-container"
-          />
+          >
+            <div
+              class="m-0 w-100 row"
+            >
+              <div
+                class="location-header"
+              >
+                <b>
+                  Posizione
+                </b>
+              </div>
+            </div>
+            <div
+              class="m-0 w-100 mt-5 row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="location-name"
+                >
+                  Milan
+                </div>
+              </div>
+              <div
+                class="col"
+              >
+                <div
+                  class="text-center"
+                >
+                  <img
+                    alt=""
+                    src="https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="m-0 w-100 mt-5 row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="location-list-container"
+                >
+                  <ul
+                    class="location-list"
+                  >
+                    <li>
+                      Paese: Italy
+                    </li>
+                    <li>
+                      Regione: Lombardia
+                    </li>
+                    <li>
+                      Latitudine: 45.467
+                    </li>
+                    <li>
+                      Longitudine: 9.200
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="col"
+              >
+                <div
+                  class="location-list-container"
+                >
+                  <ul
+                    class="location-list"
+                  >
+                    <li>
+                      Timezone: Europe/Rome
+                    </li>
+                    <li>
+                      Data e ora: 2024-01-12 21:10
+                    </li>
+                    <li>
+                      Fuso orario: 1.0
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="col-lg-6 col-md-6 col-sm-12 col-12"
         >
           <div
             class="main-container responsive-item"
-          />
+          >
+            <div
+              class="m-0 w-100 row"
+            >
+              <div
+                class="location-header"
+              >
+                <b>
+                  Situazione metereologica
+                </b>
+              </div>
+            </div>
+            <div
+              class="m-0 w-100 mt-5 row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="location-list-container"
+                >
+                  <ul
+                    class="location-list"
+                  >
+                    <li>
+                      Ora attuale: 08:10 PM
+                    </li>
+                    <li>
+                      Temperatura: 3°C
+                    </li>
+                    <li>
+                      Velocità vento: 4
+                    </li>
+                    <li>
+                      Direzione del vento: E
+                    </li>
+                    <li>
+                      Pressione: 1024
+                    </li>
+                    <li>
+                      Precipitazioni: 0
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="col"
+              >
+                <div
+                  class="location-list-container"
+                >
+                  <ul
+                    class="location-list"
+                  >
+                    <li>
+                      Umidità: 93
+                    </li>
+                    <li>
+                      Nuvolosità: 0
+                    </li>
+                    <li>
+                      Temp. Percepita: 2
+                    </li>
+                    <li>
+                      Visibilità: 10
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,11 @@ import { useSelector } from "react-redux";
 import { AppSelector } from "../store/store";
 import { ICity } from "../interfaces/ICity";
 
-const PastResearchComponent = ({activateResearch}) => {
+interface PastResearchComponentProps {
+    activateResearch: (city: ICity) => void
+}
+
+const PastResearchComponent = ({activateResearch}: PastResearchComponentProps) => {
 
     const allCities = useSelector<AppSelector, ICity[]>((state) => state.pastResearch.searches)
 

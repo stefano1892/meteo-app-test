@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardPastResearch Component card with city 1`] = `
+<DocumentFragment>
+  <div
+    class="card-past-container"
+  >
+    <div
+      class="w-100 m-0 row"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="past-location"
+        >
+          Milan
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-100 m-0 row"
+    >
+      <div
+        class="col"
+      >
+        Temperatura: 3°C
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CardPastResearch Component must return nothing if city is not defined 1`] = `<DocumentFragment />`;
